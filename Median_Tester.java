@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class MedianTester{
+public class Median_Tester{
 public static void main(String[] args) {
 		Median tester = new Median();
 		
