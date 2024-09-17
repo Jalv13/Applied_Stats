@@ -16,11 +16,11 @@ public class Union_Tester {
             i++; // Add every second number
         }
 
-        // Perform union of two lists
+        //union of two lists
         ArrayList<Integer> unionList = tester.union(listOfNumbers, listOfNumbers2);
         System.out.println("Union: " + unionList);
 
-        // Perform bubble sort on the union list and print the sorted result
+        //bubble sort on the union list and print the sorted result
         ArrayList<Integer> sortedList = BubbleSort.bubbleSort(unionList);
         System.out.println("Sorted Union: " + sortedList);
     }
