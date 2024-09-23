@@ -1,6 +1,13 @@
 import java.util.ArrayList;
 
 public class Union_Tester {
+
+    public static final String ANSI_PURPLE = "\u001B[35m";
+    public static final String ANSI_GREEN = "\u001B[32m";
+    public static final String ANSI_BLUE = "\u001B[34m";
+    public static final String ANSI_RESET = "\u001B[0m";
+
+
     public static void main(String[] args) {
         Union tester = new Union();
 
@@ -16,12 +23,19 @@ public class Union_Tester {
             i++; // Add every second number
         }
 
+        System.out.println(ANSI_PURPLE + "\n Array 1: " + listOfNumbers + ANSI_RESET);
+
+        System.out.println(ANSI_GREEN + "\n Array 2: " + listOfNumbers2 + ANSI_RESET);
+
+
+
+
         //union of two lists
         ArrayList<Integer> unionList = tester.union(listOfNumbers, listOfNumbers2);
-        System.out.println("Union: " + unionList);
+        System.out.println( "\n Union: " + unionList);
 
         //bubble sort on the union list and print the sorted result
         ArrayList<Integer> sortedList = BubbleSort.bubbleSort(unionList);
-        System.out.println("Sorted Union: " + sortedList);
+        System.out.println("\n Sorted Union: " + sortedList + "\n");
     }
 }

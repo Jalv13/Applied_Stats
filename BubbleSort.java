@@ -3,38 +3,38 @@ import java.util.ArrayList;
 public class BubbleSort {
 
     // Method to perform bubble sort on ArrayList<Integer>
-    public static ArrayList<Integer> bubbleSort(ArrayList<Integer> list) {
-        int n = list.size();
-        boolean swapped;
+    public static ArrayList<Integer> bubbleSort(ArrayList<Integer> numbers) {
+        int listSize = numbers.size();
+        boolean hasSwapped;
         
-        // Traverse through all list elements
-        for (int i = 0; i < n - 1; i++) {
-            swapped = false; // Reset the swapped flag
+        // Traverse through all elements of the list
+        for (int currentPass = 0; currentPass < listSize - 1; currentPass++) {
+            hasSwapped = false; // Reset the swapped flag for each pass
             
-            // Last i elements are already sorted
-            for (int j = 0; j < n - i - 1; j++) {
+            // Last 'currentPass' elements are already sorted
+            for (int currentIndex = 0; currentIndex < listSize - currentPass - 1; currentIndex++) {
                 // Compare adjacent elements
-                if (list.get(j) > list.get(j + 1)) {
+                if (numbers.get(currentIndex) > numbers.get(currentIndex + 1)) {
                     // Swap if elements are out of order
-                    swap(list, j, j + 1);
-                    swapped = true; // Set swapped to true if a swap happens
+                    swapElements(numbers, currentIndex, currentIndex + 1);
+                    hasSwapped = true; // Set swapped to true if a swap happens
                 }
             }
 
-            // If no swaps were made, break out early (list is sorted)
-            if (!swapped) {
+            // If no swaps were made, the list is already sorted, so we can stop early
+            if (!hasSwapped) {
                 break;
             }
         }
 
         // Return the sorted list
-        return list;
+        return numbers;
     }
 
     // Utility method to swap two elements in the ArrayList
-    private static void swap(ArrayList<Integer> list, int i, int j) {
-        int temp = list.get(i);
-        list.set(i, list.get(j));
-        list.set(j, temp);
+    private static void swapElements(ArrayList<Integer> numbers, int firstIndex, int secondIndex) {
+        int temp = numbers.get(firstIndex);
+        numbers.set(firstIndex, numbers.get(secondIndex));
+        numbers.set(secondIndex, temp);
     }
 }

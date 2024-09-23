@@ -4,7 +4,7 @@ public class Standard_Deviation_Tester {
 		Standard_Deviation tester = new Standard_Deviation();
 		
 		ArrayList<Integer> listOfNumbers = new ArrayList();
-		
+		 
 		for(int i = 0; i < 100; i++) {
 		listOfNumbers.add(i);
 		}
