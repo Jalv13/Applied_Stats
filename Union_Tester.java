@@ -1,5 +1,5 @@
 import java.util.ArrayList;
-
+import java.util.Random;
 public class Union_Tester {
 
     //ANSI Colors
@@ -10,10 +10,12 @@ public class Union_Tester {
 
     public static void main(String[] args) {
         Union tester = new Union();
-
+        Random rand = new Random();
         ArrayList<Integer> listOfNumbers = new ArrayList<>();
         for (int i = 1; i < 100; i++) {
+        int addRand = rand.nextInt(99) + 1;
             listOfNumbers.add(i);
+            listOfNumbers.add(addRand);
             i++; // Array of odd number
         }
 
